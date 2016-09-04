@@ -112,6 +112,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DataBase\StudentPortalDB.mdf" />
+    <Content Include="DataBase\StudentPortalDB_log.ldf">
+      <DependentUpon>StudentPortalDB.mdf</DependentUpon>
+    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
