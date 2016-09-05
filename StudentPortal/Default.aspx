@@ -9,17 +9,15 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
             <h2>Getting started</h2>
             <p>
-                First thing you need to do is Login with your college ID and Password provided to you be your college. There you will see all you can do as provided by your college.</p>
+                First thing you need to do is Login with your college ID and Password provided to you by your college. There you will see all you can do as provided by your college.</p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                <a class="btn btn-default" href="/Login.aspx">Login &raquo;</a>
             </p>
         </div>
         <p>
             Made by Sahil, Ananay and Chaitanay as a Level 2 project for MSITA.
         <p>
-    </div>
 
 </asp:Content>
