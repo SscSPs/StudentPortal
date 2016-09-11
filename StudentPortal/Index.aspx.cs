@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace StudentPortal
 {
-    public partial class _Default : Page
+    public partial class Index : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
