@@ -34,6 +34,7 @@ namespace StudentPortal
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            Console.WriteLine(dt.ToString());
             if (dt.Rows.Count != 0)
             {
                 Response.Redirect("About.aspx");
