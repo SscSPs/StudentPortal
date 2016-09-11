@@ -14,8 +14,7 @@ namespace StudentPortal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Uname.Text = "";
-            Pword.Text = "";
+
         }
 
         protected void Pword_TextChanged(object sender, EventArgs e)
@@ -24,7 +23,7 @@ namespace StudentPortal
         }
         protected void ButtLogin_Click(object sender, EventArgs e)
         {
-            string path = MapPath(null);
+            string path = Server.MapPath(null);
             string constring = ConfigurationManager.ConnectionStrings["dbconnectionPart1"].ConnectionString + path + ConfigurationManager.ConnectionStrings["dbconnectionPart2"].ConnectionString;
             SqlConnection con = new SqlConnection(constring);
             con.Open();
@@ -34,14 +33,13 @@ namespace StudentPortal
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Console.WriteLine(dt.ToString());
             if (dt.Rows.Count != 0)
             {
                 Response.Redirect("About.aspx");
             }
             else
             {
-                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Invalid Username and Password" + dt.Rows.Count.ToString() + "')</script>");
+                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Invalid Username and Password" + Uname.Text +"--" + Pword.Text + "')</script>");
             }
         }
     }
