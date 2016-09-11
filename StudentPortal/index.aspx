@@ -16,8 +16,5 @@
                 <a class="btn btn-default" href="/Login.aspx">Login &raquo;</a>
             </p>
         </div>
-        <p>
-            Made by Sahil, Ananay and Chaitanay as a Level 2 project for MSITA.
-        <p>
 
 </asp:Content>
