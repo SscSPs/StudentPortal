@@ -1,20 +1,20 @@
-﻿<%@ Page Title="Login" Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="StudentPortal.Login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="StudentPortal.Login" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+     
     <div class="jumbotron">
-        <h1>Welcome to Students Protal</h1>
-        <p class="lead">This is a free portal where anyone can track their college records, like Attendance, Marks, Assignments, etc. Also, we provide you with a record of all the activities you perform here.</p>
-        <p><a href="/About.aspx" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-        <a class="btn btn-default" href="/Login.aspx">Login</a>
+        <h1>Login to Students Protal</h1>
+        <p class="lead">Enter Your credentials below</p>
+        <p>&nbsp;</p>
+        <p>User Name:&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="Uname" runat="server"></asp:TextBox>
+        </p>
+        <p>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="Pword" runat="server" OnTextChanged="Pword_TextChanged"></asp:TextBox>
+        </p>
+        <p style="margin-left: 160px">
+&nbsp;
+<asp:Button class="btn btn-default" ID="ButtLogin" runat="server" Text="Login" onclick="ButtLogin_Click" /></p>
     </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>
