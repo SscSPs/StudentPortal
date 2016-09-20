@@ -10,7 +10,7 @@
             <asp:TextBox ID="Uname" runat="server"></asp:TextBox>
         </p>
         <p>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="Pword" runat="server" OnTextChanged="Pword_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="Pword" runat="server" OnTextChanged="Pword_TextChanged" TextMode="Password"></asp:TextBox>
         </p>
         <p style="margin-left: 160px">
 &nbsp;
