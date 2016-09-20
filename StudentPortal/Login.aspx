@@ -8,13 +8,29 @@
         <p>&nbsp;</p>
         <p>User Name:&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="Uname" runat="server"></asp:TextBox>
+            
+                <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="Uname"
+                    ErrorMessage="Username is a required field."
+                    ForeColor="Darkgray"
+                    class="validation">
+                </asp:RequiredFieldValidator>
+            
         </p>
+
         <p>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="Pword" runat="server" OnTextChanged="Pword_TextChanged" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                ControlToValidate="Pword"
+                ErrorMessage="Password is a required field."
+                ForeColor="Darkgray"
+                class="validation">
+            </asp:RequiredFieldValidator>
         </p>
         <p style="margin-left: 160px">
 &nbsp;
-<asp:Button class="btn btn-default" ID="ButtLogin" runat="server" Text="Login" onclick="ButtLogin_Click" /></p>
+<asp:Button class="btn btn-default" ID="ButtLogin" runat="server" Text="Login" onclick="ButtLogin_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<asp:Button class="btn btn-default" ID="ButtReg" runat="server" Text="Register" onclick="ButtReg_Click" /></p>
     </div>
 
 </asp:Content>
