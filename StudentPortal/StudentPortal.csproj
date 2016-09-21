@@ -119,6 +119,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Workspace.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace.aspx.cs">
+      <DependentUpon>Workspace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace.aspx.designer.cs">
+      <DependentUpon>Workspace.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
