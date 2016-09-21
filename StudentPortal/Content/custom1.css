@@ -1,0 +1,37 @@
+﻿.validation{
+font-size: 16px;
+}
+
+.reg_form{
+    margin-top: 40px;
+}
+
+label{
+    text-align: left;
+    padding: 0px 20px 0px 0px;
+}
+
+
+#lab_user{
+    padding-right: 32px;
+}
+
+#l1{
+    padding-right: 72px;
+}
+
+#l2{
+    padding-right: 73px;
+}
+
+#l3{
+    padding-right: 61px;
+}
+
+#l4{
+    padding-right: 108px;
+}
+
+#l5{
+    padding-right: 78px;
+}

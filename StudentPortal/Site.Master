@@ -4,6 +4,7 @@
 
 <html lang="en">
 <head runat="server">
+    <link rel="stylesheet" type ="text/css" href="Content/custom1.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - My ASP.NET Application</title>

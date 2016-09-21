@@ -44,5 +44,10 @@ namespace StudentPortal
                 ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Invalid Username and Password" + Uname.Text +"--" + Pword.Text + "')</script>");
             }
         }
+
+        protected void ButtReg_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
     }
 }
