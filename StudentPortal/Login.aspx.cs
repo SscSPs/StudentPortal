@@ -36,12 +36,12 @@ namespace StudentPortal
             if (dt.Rows.Count != 0)
             {
                 con.Close();
-                Response.Redirect("About.aspx");
+                Response.Redirect("Workspace.aspx");
             }
             else
             {
                 con.Close();
-                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Invalid Username and Password" + Uname.Text +"--" + Pword.Text + "')</script>");
+                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Invalid Username or Password" + Uname.Text +"--" + Pword.Text + "')</script>");
             }
         }
 
