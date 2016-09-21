@@ -15,21 +15,17 @@ namespace StudentPortal
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            path = Server.MapPath(null);
-            constring = ConfigurationManager.ConnectionStrings["dbconnectionPart1"].ConnectionString + path + ConfigurationManager.ConnectionStrings["dbconnectionPart2"].ConnectionString;
-            con = new SqlConnection(constring);
-
-
+            openconnection();
             Reg_inp_batch.Items.Clear();
             string batchquery = "select BatchName from Batch";
             List<string> batches = Reader(batchquery);
             foreach(string a in batches)
             Reg_inp_batch.Items.Add(a);
+            con.Close();
         }
 
         private List<string> Reader(string sqCommand)
         {
-            con.Open();
             using (SqlCommand cmd = new SqlCommand(sqCommand, con))
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -49,9 +45,9 @@ namespace StudentPortal
             
             if (Reg_inp_pass1.Text == Reg_inp_pass2.Text)
             {             
-                try
+               try
                 {
-                    con.Open();
+                    openconnection();
                     string cmd1, cmd2;
                     cmd1 = "Insert into LoginTable values('"
                         + Reg_inp_Rollnumber.Text
@@ -70,15 +66,23 @@ namespace StudentPortal
                     ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Done')</script>");
                     con.Close();
                 }
-                catch
-                {
+               catch
+               {
                     ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Error')</script>");
-                }
+               }
             }
             else
             {
                 ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Password not same, check that')</script>");
             }
+        }
+
+        void openconnection()
+        {
+            path = Server.MapPath(null);
+            constring = ConfigurationManager.ConnectionStrings["dbconnectionPart1"].ConnectionString + path + ConfigurationManager.ConnectionStrings["dbconnectionPart2"].ConnectionString;
+            con = new SqlConnection(constring);
+            con.Open();
         }
 
     }
