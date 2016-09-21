@@ -57,7 +57,7 @@
     <br />
 
 
-    <label>Confirm Password</label><asp:TextBox ID="Reg_inp_pass2" runat="server" TextMode="Password" ValidateRequestMode="Enabled" AutoPostBack="True"></asp:TextBox>
+    <label>Confirm Password</label><asp:TextBox ID="Reg_inp_pass2" runat="server" TextMode="Password" ValidateRequestMode="Enabled"></asp:TextBox>
     <asp:RequiredFieldValidator id="RequiredFieldValidator6" runat="server"
   ControlToValidate="Reg_inp_pass2"
   ErrorMessage=" Confirm Password"

@@ -51,7 +51,7 @@ namespace StudentPortal
             }
             else
             {
-               
+                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Password not same, check that')</script>");
             }
         }
 
