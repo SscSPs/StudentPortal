@@ -16,26 +16,31 @@ namespace StudentPortal
         static string constring;
         SqlConnection con;
         public bool loginsuccess = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Button2.Visible = false;
             TextBox1.Visible = false;
             TextBox2.Visible = false;
+            List<string> presentdays; List<string> totaldays;
+
             if (Login.login_success != true && !this.IsPostBack)
             {
-                List<string> presentdays; List<string> totaldays;
                 Response.Redirect("Login.aspx");
-                {
-                    openconnection();
-                    totaldays = Reader("select totaldays from StudentDetails where Rollno = '" + Login.person + "'");
-                    presentdays = Reader("select presentdays from StudentDetails where Rollno = '" + Login.person + "'");
-                    con.Close();
-                    Label2.Text = ((int.Parse(presentdays[0])/ int.Parse(totaldays[0]))*100).ToString();
-                }
+            }
+            if (!this.IsPostBack)
+            {
+                openconnection();
+                totaldays = Reader("select totaldays from StudentDetails where Rollno = '" + Login.person + "'");
+                presentdays = Reader("select presentdays from StudentDetails where Rollno = '" + Login.person + "'");
+                con.Close();
+                if (totaldays[0] != "0")
+                    Label2.Text = ((int.Parse(presentdays[0]) / int.Parse(totaldays[0])) * 100).ToString() + "%";
+                else
+                    Label2.Text = "*no classes held*";
             }
             Login.person = "";
             Login.login_success = false;
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
