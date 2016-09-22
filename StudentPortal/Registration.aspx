@@ -66,6 +66,17 @@
 </asp:RequiredFieldValidator>
     <br />
     <br />
+
+
+    <label>Batch</label><asp:dropdownlist ID="Reg_inp_batch" runat="server" ValidateRequestMode="Enabled"></asp:dropdownlist>
+    <asp:RequiredFieldValidator id="RequiredFieldValidator7" runat="server"
+  ControlToValidate="Reg_inp_batch"
+  ErrorMessage="Select The Batch of Student."
+  ForeColor="Darkgray"
+        class="validation">
+</asp:RequiredFieldValidator>
+    <br />
+    <br />
         <br />
         
     
