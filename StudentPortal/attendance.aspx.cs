@@ -121,14 +121,20 @@ namespace StudentPortal
             const string query = "SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS"
                                     + " WHERE TABLE_NAME = @TABLENAME AND"
                                     + " COLUMN_NAME = @COLUMNNAME";
-
+            openconnection();
             using (var cmd = new SqlCommand(query, objCon))
             {
                 cmd.Parameters.Add("@TABLENAME", SqlDbType.NVarChar, 128).Value = tableName;
                 cmd.Parameters.Add("@COLUMNNAME", SqlDbType.NVarChar, 128).Value = columnName;
                 var objvalid = cmd.ExecuteScalar(); // will return 1 or null
+                con.Close();
                 return objvalid != null;
             }
+        }
+
+        protected void Batch_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
         }
     }
 }

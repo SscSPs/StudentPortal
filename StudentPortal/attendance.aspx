@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="attendance.aspx.cs" Inherits="StudentPortal.attandance" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <fieldset><div><p> 
-        <asp:DropDownList Width ="100px" ID="Batch" runat="server"  OnTextChanged="Batch_SelectedIndexChanged" AutoPostBack ="true">
+        <asp:DropDownList Width ="100px" ID="Batch" runat="server"  OnTextChanged="Batch_SelectedIndexChanged" AutoPostBack ="true" OnSelectedIndexChanged="Batch_SelectedIndexChanged1">
         </asp:DropDownList>
         </p>
         <p> 

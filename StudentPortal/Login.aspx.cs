@@ -12,9 +12,10 @@ namespace StudentPortal
 {
     public partial class Login : System.Web.UI.Page
     {
+        public static bool login_success = false;
+        public static string person = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Pword_TextChanged(object sender, EventArgs e)
@@ -36,6 +37,8 @@ namespace StudentPortal
             if (dt.Rows.Count != 0)
             {
                 con.Close();
+                login_success = true;
+                person = Uname.Text;
                 Response.Redirect("Workspace.aspx");
             }
             else
