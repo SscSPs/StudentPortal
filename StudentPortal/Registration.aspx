@@ -73,7 +73,7 @@
   ControlToValidate="Reg_inp_batch"
   ErrorMessage="Select The Batch of Student."
   ForeColor="Darkgray"
-        class="validation">
+  class="validation">
 </asp:RequiredFieldValidator>
     <br />
     <br />
